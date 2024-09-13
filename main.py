@@ -27,11 +27,10 @@ for filepath in filepaths:
     pdf.cell(w=40, h=8, txt=liste[3], border=1, align="L")
     pdf.cell(w=25, h=8, txt=liste[4], border=1, ln=1, align="L")
 
-
     pdf.set_font("Times", "I", 10)
     pdf.set_text_color(80, 80, 80)
     # total = 0
-    for i,row in df.iterrows():
+    for i, row in df.iterrows():
         pdf.cell(w=25, h=8, txt=str(row["product_id"]), border=1, align="L")
         pdf.cell(w=60, h=8, txt=str(row["product_name"]), border=1, align="L")
         pdf.cell(w=40, h=8, txt=str(row["amount_purchased"]), border=1, align="L")
